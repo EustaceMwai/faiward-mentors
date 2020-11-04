@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "606649256283",
+    "firebase_url": "https://faiward.firebaseio.com",
+    "project_id": "faiward",
+    "storage_bucket": "faiward.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606649256283:android:ce6fe0b30d67b7a881b27e",
+        "android_client_info": {
+          "package_name": "com.example.faiward2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606649256283-ifoi7lmvm8bkj3rced8ir5m16ol6qpim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCziddgWlVTOXTGE49HVeK3i1pfjw_jXXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606649256283-ifoi7lmvm8bkj3rced8ir5m16ol6qpim.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
