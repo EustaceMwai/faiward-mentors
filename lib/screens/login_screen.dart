@@ -71,6 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
         color: Theme.of(context).primaryColor,
         width: double.infinity,
         child: Form(
+          key: formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,

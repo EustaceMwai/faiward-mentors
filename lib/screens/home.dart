@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:faiward2/screens/post.dart';
 import 'package:faiward2/services/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -97,6 +98,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               SizedBox(
                 height: 10,
+              ),
+              ListTile(
+                title: Text('Admin'),
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Post()));
+                },
               ),
             ],
           ),

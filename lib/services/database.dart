@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-
 class DatabaseMethods {
   final String userId;
 
@@ -67,22 +66,25 @@ class DatabaseMethods {
     return await Firestore.instance.collection("loans").getDocuments();
   }
 
-  Future uploadUserInfo(
-      String userId, String name, String date, int kilograms) async {
-    return await col.document(userId).setData({
-      'id': userId,
-      'name': name,
-      'date': date,
-      'kilograms': kilograms
-    }).catchError((e) {
+  // Future uploadUserInfo(
+  //     String userId, String name, String date, int kilograms) async {
+  //   return await col.document(userId).setData({
+  //     'id': userId,
+  //     'name': name,
+  //     'date': date,
+  //     'kilograms': kilograms
+  //   }).catchError((e) {
+  //     print(e.toString());
+  //   });
+  // }
+
+  uploadUserInfo(userMap) {
+    Firestore.instance.collection("users").add(userMap).catchError((e) {
       print(e.toString());
     });
   }
 
-
-
-
-  Future uploadMilkInfo(
+  Future uploadPostInfo(
       String userId, String name, String date, int kilograms) async {
     final FirebaseAuth _auth = FirebaseAuth.instance;
     final Firestore _firestore = Firestore.instance;

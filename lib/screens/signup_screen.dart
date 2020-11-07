@@ -1,8 +1,9 @@
 import 'package:faiward2/helper/helperfunctions.dart';
 import 'package:faiward2/services/auth.dart';
 import 'package:faiward2/services/database.dart';
-import 'file:///C:/Users/USER/AndroidStudioProjects/faiward2/lib/screens/home.dart';
 import 'package:flutter/material.dart';
+
+import 'file:///C:/Users/USER/AndroidStudioProjects/faiward2/lib/screens/home.dart';
 
 class SignupScreen extends StatefulWidget {
   static const routeName = '/signup';
@@ -28,10 +29,10 @@ class _SignupScreenState extends State<SignupScreen> {
 
   signMeUp() {
     if (formKey.currentState.validate()) {
-//      Map<String, String> userInfoMap = {
-//        "name": userNameTextEditingController.text,
-//        "email": emailTextEditingController.text,
-//      };
+      Map<String, String> userInfoMap = {
+        "name": userNameTextEditingController.text,
+        "email": emailTextEditingController.text,
+      };
       HelperFunctions.saveUserEmailSharedPreference(
           emailTextEditingController.text);
       HelperFunctions.saveUserNameInSharedPreference(
@@ -43,9 +44,9 @@ class _SignupScreenState extends State<SignupScreen> {
           .signUpWithEmailAndPassword(emailTextEditingController.text,
               passwordTextEditingController.text)
           .then((val) {
-        // print("${val.uid}");
+//        print("${val.uid}");
 
-//        databaseMethods.uploadUserInfo();
+        databaseMethods.uploadUserInfo(userInfoMap);
         HelperFunctions.saveUserLoggedInSharedPreference(true);
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => MyHomePage()));
